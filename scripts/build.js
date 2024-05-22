@@ -5,21 +5,9 @@ let zlib = require('zlib');
 ([
     // Packages:
     'alpinejs',
-    'csp',
-    // 'history', - removed because this plugin has been moved to livewire/livewire until it's stable...
-    // 'navigate', - remove because this plugin has been moved to livewire/livewire until it's stable...
-    'intersect',
-    'persist',
-    'collapse',
-    'anchor',
-    'morph',
-    'focus',
-    'sort',
-    'mask',
-    'ui',
 ]).forEach(package => {
     if (! fs.existsSync(`./packages/${package}/dist`)) {
-        fs.mkdirSync(`./packages/${package}/dist`, 0744);
+        fs.mkdirSync(`./packages/${package}/dist`, '0744');
     }
 
     // Go through each file in the package's "build" directory
